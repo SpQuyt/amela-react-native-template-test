@@ -9,7 +9,7 @@
         "ios": "react-native run-ios",
         "test": "jest",
         "codepush": "./code-push.command",
-        "pod-install": "cd ios && pod install && cd ..",
+        "pod-install": "bundle install && cd ios && bundle exec pod install && cd ..",
         "postinstall": "patch-package && yarn pod-install",
         "prepare": "husky install",
         "assets-link": "npx react-native link",
