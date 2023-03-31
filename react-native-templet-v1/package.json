@@ -11,7 +11,6 @@
         "codepush": "./code-push.command",
         "pod-install": "bundle install && cd ios && bundle exec pod install && cd ..",
         "postinstall": "patch-package && yarn pod-install",
-        "prepare": "husky install",
         "assets-link": "npx react-native link",
         "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
         "lint:ts": "tslint 'src/**/*.{ts,tsx,js}'",

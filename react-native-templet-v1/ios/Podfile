@@ -21,8 +21,16 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
+project 'DemoApp',
+  'Debug' => :debug,
+  'Debug (dev)' => :debug,
+  'Release' => :release,
+  'Release (dev)' => :release
+
 target 'DemoApp' do
   config = use_native_modules!
+
+  pod 'react-native-config', :path => '../node_modules/react-native-config'
 
   # Flags change depending on the env values.
   flags = get_default_flags()
